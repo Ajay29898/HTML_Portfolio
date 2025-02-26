@@ -1,0 +1,78 @@
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Info</title>
+</head>
+   <style>
+      form{
+        align-self: center;
+      }
+
+      input [type="number"]{
+         width: 350px
+      }
+   </style>
+   
+<body>
+
+    <h1>Enter Project Information</h1>
+    
+    <div>
+       <form id="projectForm" onsubmit="return saveData();">
+    <caption> Project Details</caption>
+    
+    <fieldset title="Information about Running Project">   
+       <legend>Information about Running Project</legend> 
+       <label for=""> ProjectId </label>&nbsp;  
+       <input type="number" name="projectId" placeholder="Enter ProjectId" min="1" max="10000" step="2" required /> <sup style="color: red;">*</sup><br><br>
+       <label> Project name </label>
+       <input type="text" name="projectName" placeholder="Enter Project Name" min="5" max="20" required />  <sup style="color: red;">*</sup><br><br>
+       <label> Start Date </label>
+       <input type="date" name="startDate"  min="2015-03-27" max="2025-02-26" required />  <sup style="color: red;">*</sup><br><br>
+       <label> End Date </label>
+       <input type="date" name="endDate"  min="2015-03-27" max="2025-02-26" required />  <sup style="color: red;">*</sup><br><br>
+       <label> Price </label>
+       <input type="number" name="projectPrice" min=10000.00 max=10000000.00 required>  <sup style="color: red;">*</sup><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Project Type</legend>
+        <input type="radio" name="projectType" value="offshore"/> Off Shore <br>
+        <input type="radio" name="projectType" value="onsite" checked/> On Site <br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Project Type</legend>
+        <input type="checkbox" name="reliability" /> Reliability <br>
+        <input type="checkbox" name="scaleability" /> Scaleability <br>
+        <input type="checkbox" name="Fault Tolerance" /> Fault Tolerance <br>
+    </fieldset>
+    
+    <label> Completion Status</label>&nbsp;<br>
+    <b>1</b><input type="range" name="completionStatus" min="1" max="100" step="5" value="5"/><b>100</b> <br><br>
+    <b>Location list</b><br>
+    <select size="1">
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Pune">Pune</option>
+    </select><br><br>
+
+    <b>Features List</b><br>
+    <select size="5" name="featuresList">
+        <option value="Optimization">Optimization</option>
+        <option value="Analytics">Analytics</option>
+        <option value="Synthesizing">Synthesizing</option>
+        <option value="Data Fragementation">Data Fragementation</option>
+        <option value="Profiling">Profiling</option>
+    </select><br><br>
+    <input type="submit" value="Send data"/>&nbsp;&nbsp;
+    <input type="button" value="Get data" onclick="getData()"/>
+
+    </form>
+    </div>
+    
+</body>
+</html>
